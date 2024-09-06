@@ -1,21 +1,19 @@
-package com.yutou.oj.model.dto.post;
+package com.yutou.oj.model.dto.question;
 
 import com.yutou.oj.common.PageRequest;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 /**
  * 查询请求
  *
  * @author xyt
- * @from csu
+ * @from   csu
  */
-@EqualsAndHashCode(callSuper = true)
 @Data
-public class PostQueryRequest extends PageRequest implements Serializable {
-
+public class QuestionQueryRequest extends PageRequest implements Serializable {
     /**
      * id
      */
