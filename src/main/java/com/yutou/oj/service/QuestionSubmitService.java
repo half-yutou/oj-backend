@@ -2,7 +2,9 @@ package com.yutou.oj.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yutou.oj.model.dto.questionsubmit.QuestionSubmitAddRequest;
 import com.yutou.oj.model.entity.QuestionSubmit;
+import com.yutou.oj.model.entity.User;
 
 /**
 * @author xyt
@@ -11,4 +13,11 @@ import com.yutou.oj.model.entity.QuestionSubmit;
 */
 public interface QuestionSubmitService extends IService<QuestionSubmit> {
 
+    /**
+     * 提交题目信息
+     * @param questionSubmitAddRequest
+     * @param loginUser
+     * @return
+     */
+    long doQuestionSubmit(QuestionSubmitAddRequest questionSubmitAddRequest, User loginUser);
 }
